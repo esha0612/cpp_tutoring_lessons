@@ -1,0 +1,1 @@
+* Create a calculator class with different states (using enum), operator overloading (for different inputs to the same operator), etc.
