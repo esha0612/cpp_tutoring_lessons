@@ -67,10 +67,21 @@ public:
 
     void deal() {
         // Deal a card from the deck.
+        int val = (rand() % 52);
+        cout << "Your card: " << cards[val].first << " "<< cards[val].second << endl;
+        
     }
 
     void reset() {
         // Reset the deck of cards.
+        for (int i = 1; i <= 13; i++) {
+            for (int j = 0; j < 4; j++) {
+                cards.push_back({i, j});
+            }
+        }
+        //Do I need to call the constructor for this?
+
+
     }
 
     void print() {
@@ -105,4 +116,69 @@ public:
             cout << endl;
         }
     }
+};
+class Dealer {
+public:
+    void shuffleDeck(Deck &deck) {
+        int randomTimes = rand() % (cards.size() * 5);
+        for (int i = 0; i < randomTimes; i++) {
+            int randomCard = rand() % cards.size();
+            swap(cards[i], cards[randomCard]);
+        }
+
+    }
+    void dealCard(Deck &deck){
+        for (int i = 0; i < 5; i++) {
+            
+        }
+    }
+    void resetDeck(Deck &deck){
+        
+    }
+    void printDeck(Deck &deck){
+
+    }
+};
+class Player : Deck {
+    string name;
+    Deck hand;
+public:
+    void printHand() {
+
+        
+    }
+    void dealCard(Deck &deck){
+        
+    }
+    void resetHand() {
+        
+    }
+    void printHand() {
+        
+    }
+    void scoreHand(){
+        
+    }
+};
+class Game{
+    Deck deck;
+    Dealer dealer;
+    vector<Player> player;
+public:
+    void startGame() {
+        
+    }
+    void endGame(){
+        
+    }
+    void printPlayers() {
+        
+    }
+    void printDeck() {
+        
+    }
+    void printDealer() {
+        
+    }
+// endGame()
 };
